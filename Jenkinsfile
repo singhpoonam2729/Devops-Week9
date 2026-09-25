@@ -2,11 +2,12 @@ pipeline {
 
     agent any
 
-    environment {
-        IMAGE_NAME = "week9-devops-app"
-        IMAGE_TAG = "${BUILD_NUMBER}"
-        CONTAINER_NAME = "week9-app"
-    }
+  environment {
+    DOCKERHUB_USERNAME = "phrr"
+    IMAGE_NAME = "${DOCKERHUB_USERNAME}/week9-devops-app"
+    IMAGE_TAG = "${BUILD_NUMBER}"
+    CONTAINER_NAME = "week9-app"
+}
 
     stages {
 
